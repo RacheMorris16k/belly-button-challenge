@@ -61,13 +61,18 @@ function buildCharts(sample) {
           marker: {
             size: sample_values,
             color: otu_ids,
-            colorscale: "Earth"
+            colorscale: "Earth",
+            line: { color: "black", width: 0.5 },
+            opacity: 0.8
           }
         }];
-    
+    //Build a Bubble Chart
         let bubbleLayout = {
           title: "Bacteria Cultures per Sample",
+          margin: { t: 0},
           xaxis: { title: "OTU ID" },
+          yaxis: { title: "Sample Value"  },
+          margin: { t: 30 },
           hovermode: "closest"
         };
 
